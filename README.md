@@ -86,7 +86,7 @@ psql -d "postgres://[user]:[password]@[hostname]/titanic?sslmode=require" -f tit
 ```
 
 - Source: [https://www.kaggle.com/datasets/ibrahimelsayed182/titanic-dataset](https://www.kaggle.com/datasets/ibrahimelsayed182/titanic-dataset)
-- License: [Unknown](https://www.kaggle.com/datasets/vinicius150987/titanic3))
+- License: [Unknown](https://www.kaggle.com/datasets/vinicius150987/titanic3)
  
 ### World Happiness Index
 
