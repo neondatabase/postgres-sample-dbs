@@ -4,7 +4,7 @@ A collection of sample Postgres databases for learning, testing, and development
 
 # How the dataset files were created
 
-Data was loaded into [Neon Postgres](https://neon.tech/) (Postgres 15) using the prescribed installation method, or a schema was created for the raw data and data was loaded from a delimited file (.csv). Next, the data was dumped to `*.sql` files using the [pg_dump](https://www.postgresql.org/docs/current/app-pgdump.html) utility. For example:
+Data was loaded into [Neon Postgres](https://neon.tech/) (Postgres 15) using the prescribed installation method, or a schema was created for the raw data and data was loaded from a delimited file (`.csv`). The data was them dumped to `*.sql` files using the [pg_dump](https://www.postgresql.org/docs/current/app-pgdump.html) utility. For example:
 
 ```bash
 pg_dump "postgres://[user]:[password]@[hostname]/[dbname]" --file=[file_name].sql --format=p --no-owner --no-privileges --no-tablespaces
@@ -98,4 +98,4 @@ This repository is provided under the MIT License. However, please note that eac
 
 The MIT License applies to the scripts and other components that are created by me, which include the scripts that load the data into schemas and create dumps. I respect the rights of the original creators of the databases, and I only redistribute these databases in compliance with their respective licenses.
 
-For each individual database, I have provided the respective licenses along with the database files, or I have clearly indicated where the full text of the license can be found. If you choose to use any of these databases, you must comply with the terms specified in their respective licenses.
+For each individual database, I have clearly indicated where the full text of the license can be found. If you choose to use any of these databases, you must comply with the terms specified in their respective licenses.
