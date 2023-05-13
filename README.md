@@ -16,12 +16,16 @@ Data can be loaded using [psql](https://www.postgresql.org/docs/current/app-psql
 
 ### Periodic table data
 
+Periodic table of elements (1 table, 72 KB)
+
 psql -d "postgres://[user]:[password]@[hostname]/periodic_table?sslmode=require" -f periodic_table.sql
 
 Source: []()
 License: []()
 
 ### Titanic data
+
+Titanic passenger data (1 table, 408 KB)
 
 ```bash
 psql -d "postgres://[user]:[password]@[hostname]/titanic?sslmode=require" -f titanic.sql
@@ -32,6 +36,8 @@ License: []()
 
 ### Netfllix data
 
+Netflix shows (1 table, 3832 KB)
+
 ```bash
 psql -d "postgres://[user]:[password]@[hostname]/netflix?sslmode=require" -f netflix_shows.sql
 ```
@@ -41,7 +47,7 @@ License: []()
   
 ### Lego data
 
-
+Lego database (8 tables, 35 MB)
 
 ```bash
 psql -d "postgres://[user]:[password]@[hostname]/lego?sslmode=require" -f lego.sql
@@ -51,16 +57,18 @@ License: []()
   
 ### Happines index
 
+World Happiness Index (1 table, 56 KB)
 
 ```bash
 psql -d "postgres://[user]:[password]@[hostname]/happiness_index?sslmode=require" -f happiness_index.sql
 ```
 
-Source: []()
-License: []()
+Source: [https://www.kaggle.com/datasets/unsdsn/world-happiness](https://www.kaggle.com/datasets/unsdsn/world-happiness)
+License: [CC0: Public Domain](https://creativecommons.org/publicdomain/zero/1.0/)
 
 ### Chinook dataset
 
+Chinook digital media store database (11 tables, 2280 KB)
 
 ```bash
 psql -d "postgres://[user]:[password]@[hostname]/chinook?sslmode=require" -f chinook.sql
@@ -72,6 +80,7 @@ psql -d "postgres://[user]:[password]@[hostname]/chinook?sslmode=require" -f chi
   
 ### Pagila dataset
 
+Pagila database (22 tables, 7856 KB)
 
 ```bash
 psql -d "postgres://[user]:[password]@[hostname]/pagila?sslmode=require" -f pagila.sql
