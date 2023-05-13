@@ -20,27 +20,39 @@ psql -d "postgres://[user]:[password]@[hostname]/periodic_table?sslmode=require"
 
 ### Titanic data
 
+```bash
 psql -d "postgres://[user]:[password]@[hostname]/titanic?sslmode=require" -f titanic.sql
+```
 
 ### Netfllix data
-  
+
+```bash
 psql -d "postgres://[user]:[password]@[hostname]/netflix?sslmode=require" -f netflix_shows.sql
+```
   
 ### Lego data
 
+```bash
 psql -d "postgres://[user]:[password]@[hostname]/lego?sslmode=require" -f lego.sql
+```
   
 ### Happines index
 
+```bash
 psql -d "postgres://[user]:[password]@[hostname]/happiness_index?sslmode=require" -f happiness_index.sql
-  
+```
+
 ### Chinook dataset
 
+```bash
 psql -d "postgres://[user]:[password]@[hostname]/chinook?sslmode=require" -f chinook.sql
+```
   
 ### Pagila dataset
 
+```bash
 psql -d "postgres://[user]:[password]@[hostname]/pagila?sslmode=require" -f pagila.sql
+```
 
 ## Licensing
 
