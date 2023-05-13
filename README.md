@@ -54,8 +54,8 @@ psql -d "postgres://[user]:[password]@[hostname]/happiness_index?sslmode=require
 
 ### Chinook dataset
 
-Source: [https://github.com/lerocha/chinook-database](https://github.com/lerocha/chinook-database)
-License: [https://github.com/lerocha/chinook-database/blob/master/LICENSE.md](https://github.com/lerocha/chinook-database/blob/master/LICENSE.md)
+- Source: [https://github.com/lerocha/chinook-database](https://github.com/lerocha/chinook-database)
+- License: [https://github.com/lerocha/chinook-database/blob/master/LICENSE.md](https://github.com/lerocha/chinook-database/blob/master/LICENSE.md)
 
 ```bash
 psql -d "postgres://[user]:[password]@[hostname]/chinook?sslmode=require" -f chinook.sql
@@ -63,8 +63,8 @@ psql -d "postgres://[user]:[password]@[hostname]/chinook?sslmode=require" -f chi
   
 ### Pagila dataset
 
-Source: [https://github.com/devrimgunduz/pagila](https://github.com/devrimgunduz/pagila)
-License: [LICENSE.txt](https://github.com/devrimgunduz/pagila/blob/master/LICENSE.txt)
+- Source: [https://github.com/devrimgunduz/pagila](https://github.com/devrimgunduz/pagila)
+- License: [LICENSE.txt](https://github.com/devrimgunduz/pagila/blob/master/LICENSE.txt)
 
 ```bash
 psql -d "postgres://[user]:[password]@[hostname]/pagila?sslmode=require" -f pagila.sql
