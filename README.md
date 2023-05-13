@@ -18,7 +18,9 @@ Data can be loaded using [psql](https://www.postgresql.org/docs/current/app-psql
 
 Periodic table of elements (1 table, 72 KB)
 
+```bash
 psql -d "postgres://[user]:[password]@[hostname]/periodic_table?sslmode=require" -f periodic_table.sql
+```
 
 Source: []()
 License: []()
