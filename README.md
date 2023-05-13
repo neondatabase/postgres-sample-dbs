@@ -25,7 +25,16 @@ git clone https://github.com/danieltprice/postgres-sample-dbs.git
 
 1. Click on the `.sql` file to open it.
 2. Above the content of the file, you should see a button labeled "Raw". Click it. This will open a new tab or window in your browser displaying the raw contents of the file.
-3. Right-click anywhere in the window or tab displaying the raw file contents, and select "Save As..." from the context menu. Choose a location on your computer to save the file, and click "Save".
+3. Right-click anywhere in the window or tab displaying the raw file contents, and select "Save As..." or "Save Page As ..." from the context menu. Choose a location on your computer to save the file, and click "Save".
+
+### Create a database in Postgres
+
+You can load a dataset into any database in Postgres, but the `psql` commands below assume you have a database named for the dataset. To create a database, use a create table statement:
+
+```sql
+CREATE DATABASE [dbname];
+```
+If you are using [Neon Postgres](https://neon.tech/), you can also create a database from the [Neon console](https://console.neon.tech/). See [Create a database](https://neon.tech/docs/manage/databases#create-a-database) for instructions.
 
 ### Load data using psql
 
@@ -43,6 +52,8 @@ Data can be loaded using [psql](https://www.postgresql.org/docs/current/app-psql
 
 Chinook digital media store database (11 tables, 2280 KB)
 
+Navigate to the directory where you downloaded the `.sql` file and run the following `psql` command:
+
 ```bash
 psql -d "postgres://[user]:[password]@[hostname]/chinook?sslmode=require" -f chinook.sql
 ```
@@ -54,6 +65,8 @@ psql -d "postgres://[user]:[password]@[hostname]/chinook?sslmode=require" -f chi
 
 Lego database (8 tables, 35 MB)
 
+Navigate to the directory where you downloaded the `.sql` file and run the following `psql` command:
+
 ```bash
 psql -d "postgres://[user]:[password]@[hostname]/lego?sslmode=require" -f lego.sql
 ```
@@ -63,6 +76,8 @@ psql -d "postgres://[user]:[password]@[hostname]/lego?sslmode=require" -f lego.s
 ### Netflix data
 
 Netflix shows (1 table, 3832 KB)
+
+Navigate to the directory where you downloaded the `.sql` file and run the following `psql` command:
 
 ```bash
 psql -d "postgres://[user]:[password]@[hostname]/netflix?sslmode=require" -f netflix_shows.sql
@@ -74,6 +89,8 @@ psql -d "postgres://[user]:[password]@[hostname]/netflix?sslmode=require" -f net
 ### Pagila database
 
 Pagila database (22 tables, 7856 KB)
+
+Navigate to the directory where you downloaded the `.sql` file and run the following `psql` command:
 
 ```bash
 psql -d "postgres://[user]:[password]@[hostname]/pagila?sslmode=require" -f pagila.sql
@@ -87,6 +104,8 @@ psql -d "postgres://[user]:[password]@[hostname]/pagila?sslmode=require" -f pagi
 
 Periodic table of elements (1 table, 72 KB)
 
+Navigate to the directory where you downloaded the `.sql` file and run the following `psql` command:
+
 ```bash
 psql -d "postgres://[user]:[password]@[hostname]/periodic_table?sslmode=require" -f periodic_table.sql
 ```
@@ -97,6 +116,8 @@ psql -d "postgres://[user]:[password]@[hostname]/periodic_table?sslmode=require"
 ### Titanic passenger data
 
 Titanic passenger data (1 table, 408 KB)
+
+Navigate to the directory where you downloaded the `.sql` file and run the following `psql` command:
 
 ```bash
 psql -d "postgres://[user]:[password]@[hostname]/titanic?sslmode=require" -f titanic.sql
@@ -109,13 +130,14 @@ psql -d "postgres://[user]:[password]@[hostname]/titanic?sslmode=require" -f tit
 
 World Happiness Index (1 table, 56 KB)
 
+Navigate to the directory where you downloaded the `.sql` file and run the following `psql` command:
+
 ```bash
 psql -d "postgres://[user]:[password]@[hostname]/happiness_index?sslmode=require" -f happiness_index.sql
 ```
 
 - Source: [https://www.kaggle.com/datasets/unsdsn/world-happiness](https://www.kaggle.com/datasets/unsdsn/world-happiness)
 - License: [CC0: Public Domain](https://creativecommons.org/publicdomain/zero/1.0/) 
-
 
 
 ## Licensing
