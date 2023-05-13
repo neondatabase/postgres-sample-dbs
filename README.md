@@ -40,8 +40,8 @@ Lego database (8 tables, 35 MB)
 ```bash
 psql -d "postgres://[user]:[password]@[hostname]/lego?sslmode=require" -f lego.sql
 ```
-Source: []()
-License: []()
+- Source: [https://www.kaggle.com/datasets/rtatman/lego-database](https://www.kaggle.com/datasets/rtatman/lego-database)
+- License: [CC0: Public Domain](https://creativecommons.org/publicdomain/zero/1.0/) 
 
 ### Netflix data
 
@@ -51,8 +51,8 @@ Netflix shows (1 table, 3832 KB)
 psql -d "postgres://[user]:[password]@[hostname]/netflix?sslmode=require" -f netflix_shows.sql
 ```
 
-Source: []()
-License: []()
+- Source: []()
+- License: [CC0: Public Domain](https://creativecommons.org/publicdomain/zero/1.0/) 
 
 ### Pagila database
 
@@ -74,8 +74,8 @@ Periodic table of elements (1 table, 72 KB)
 psql -d "postgres://[user]:[password]@[hostname]/periodic_table?sslmode=require" -f periodic_table.sql
 ```
 
-Source: []()
-License: []()
+- Source: [https://github.com/andrejewski/periodic-table](https://github.com/andrejewski/periodic-table)
+- License: [ISC License](https://github.com/andrejewski/periodic-table/blob/master/LICENSE)
 
 ### Titanic passenger data
 
@@ -85,10 +85,9 @@ Titanic passenger data (1 table, 408 KB)
 psql -d "postgres://[user]:[password]@[hostname]/titanic?sslmode=require" -f titanic.sql
 ```
 
-Source: []()
-License: []() 
-
-  
+- Source: []()
+- License: [CC0: Public Domain](https://creativecommons.org/publicdomain/zero/1.0/)
+ 
 ### World Happiness Index
 
 World Happiness Index (1 table, 56 KB)
@@ -97,11 +96,8 @@ World Happiness Index (1 table, 56 KB)
 psql -d "postgres://[user]:[password]@[hostname]/happiness_index?sslmode=require" -f happiness_index.sql
 ```
 
-Source: [https://www.kaggle.com/datasets/unsdsn/world-happiness](https://www.kaggle.com/datasets/unsdsn/world-happiness)
-License: [CC0: Public Domain](https://creativecommons.org/publicdomain/zero/1.0/)
-
-
-  
+- Source: [https://www.kaggle.com/datasets/unsdsn/world-happiness](https://www.kaggle.com/datasets/unsdsn/world-happiness)
+- License: [CC0: Public Domain](https://creativecommons.org/publicdomain/zero/1.0/) 
 
 
 
