@@ -43,7 +43,7 @@ psql -d "postgres://[user]:[password]@[hostname]/lego?sslmode=require" -f lego.s
 Source: []()
 License: []()
 
-### Netfllix data
+### Netflix data
 
 Netflix shows (1 table, 3832 KB)
 
