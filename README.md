@@ -4,7 +4,7 @@ A collection of sample Postgres databases for learning, testing, and development
 
 # How the dataset files were created
 
-Data was loaded into [Neon Postgres](https://neon.tech/) (Postgres 15) using the prescribed installation method, or a schema was created for the raw data and data was loaded from a delimited file (`.csv`). The data was them dumped to `*.sql` files using the [pg_dump](https://www.postgresql.org/docs/current/app-pgdump.html) utility. For example:
+Data was loaded into [Neon Postgres](https://neon.tech/) (Postgres 15) using the prescribed installation method, or a schema was created and the data was loaded from a delimited file (`.csv`). The data was then dumped to an `*.sql` file using the [pg_dump](https://www.postgresql.org/docs/current/app-pgdump.html) utility. For example:
 
 ```bash
 pg_dump "postgres://[user]:[password]@[hostname]/[dbname]" --file=[file_name].sql --format=p --no-owner --no-privileges --no-tablespaces
