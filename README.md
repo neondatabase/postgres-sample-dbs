@@ -12,7 +12,15 @@ pg_dump "postgres://[user]:[password]@[hostname]/[dbname]" --file=[file_name].sq
 
 ## Loading datasets into Postgres
 
-Data can be loaded using [psql](https://www.postgresql.org/docs/current/app-psql.html) using the following commands:
+Data can be loaded using [psql](https://www.postgresql.org/docs/current/app-psql.html).
+
+[Chinook database](#chinook-dataset)
+LEGO database
+Netflix shows
+Pagila database
+Periodic table
+Titanic passenger data
+World Happiness Index
 
 ### Periodic table data
 
