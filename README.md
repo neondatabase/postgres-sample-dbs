@@ -28,7 +28,7 @@ git clone https://github.com/danieltprice/postgres-sample-dbs.git
 
 ### Create a database in Postgres
 
-You can load a dataset into any database, but the `psql` commands below assume you have a database named for the dataset. To create a database, use a create table statement:
+You can load a dataset into any database, but the `psql` commands below assume you have a database named for the dataset. To create a database, use a `CREATE TABLE` statement:
 
 ```sql
 CREATE DATABASE [dbname];
