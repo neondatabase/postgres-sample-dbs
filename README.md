@@ -14,33 +14,32 @@ pg_dump "postgres://[user]:[password]@[hostname]/[dbname]" --file=[file_name].sq
 
 Data can be loaded using [psql](https://www.postgresql.org/docs/current/app-psql.html).
 
-[Chinook database](#chinook-dataset)
-LEGO database
-Netflix shows
-Pagila database
-Periodic table
-Titanic passenger data
-World Happiness Index
+- [Chinook database](#chinook-database)
+- [Lego database](#lego-database)
+- [Netflix data](#netflix-data)
+- [Pagila database](pagila-database)
+- [Periodic table data](periodic-table-data)
+- [Titanic passenger data](titantic-passenger-data)
+- [World Happiness Index](world-happiness-index)
 
-### Periodic table data
+### Chinook database
 
-Periodic table of elements (1 table, 72 KB)
-
-```bash
-psql -d "postgres://[user]:[password]@[hostname]/periodic_table?sslmode=require" -f periodic_table.sql
-```
-
-Source: []()
-License: []()
-
-### Titanic data
-
-Titanic passenger data (1 table, 408 KB)
+Chinook digital media store database (11 tables, 2280 KB)
 
 ```bash
-psql -d "postgres://[user]:[password]@[hostname]/titanic?sslmode=require" -f titanic.sql
+psql -d "postgres://[user]:[password]@[hostname]/chinook?sslmode=require" -f chinook.sql
 ```
 
+- Source: [https://github.com/lerocha/chinook-database](https://github.com/lerocha/chinook-database)
+- License: [https://github.com/lerocha/chinook-database/blob/master/LICENSE.md](https://github.com/lerocha/chinook-database/blob/master/LICENSE.md)
+
+### Lego database
+
+Lego database (8 tables, 35 MB)
+
+```bash
+psql -d "postgres://[user]:[password]@[hostname]/lego?sslmode=require" -f lego.sql
+```
 Source: []()
 License: []()
 
@@ -54,18 +53,43 @@ psql -d "postgres://[user]:[password]@[hostname]/netflix?sslmode=require" -f net
 
 Source: []()
 License: []()
-  
-### Lego data
 
-Lego database (8 tables, 35 MB)
+### Pagila database
+
+Pagila database (22 tables, 7856 KB)
 
 ```bash
-psql -d "postgres://[user]:[password]@[hostname]/lego?sslmode=require" -f lego.sql
+psql -d "postgres://[user]:[password]@[hostname]/pagila?sslmode=require" -f pagila.sql
 ```
+
+- Source: [https://github.com/devrimgunduz/pagila](https://github.com/devrimgunduz/pagila)
+- License: [LICENSE.txt](https://github.com/devrimgunduz/pagila/blob/master/LICENSE.txt)
+
+
+### Periodic table data
+
+Periodic table of elements (1 table, 72 KB)
+
+```bash
+psql -d "postgres://[user]:[password]@[hostname]/periodic_table?sslmode=require" -f periodic_table.sql
+```
+
 Source: []()
 License: []()
+
+### Titanic passenger data
+
+Titanic passenger data (1 table, 408 KB)
+
+```bash
+psql -d "postgres://[user]:[password]@[hostname]/titanic?sslmode=require" -f titanic.sql
+```
+
+Source: []()
+License: []() 
+
   
-### Happines index
+### World Happiness Index
 
 World Happiness Index (1 table, 56 KB)
 
@@ -76,28 +100,9 @@ psql -d "postgres://[user]:[password]@[hostname]/happiness_index?sslmode=require
 Source: [https://www.kaggle.com/datasets/unsdsn/world-happiness](https://www.kaggle.com/datasets/unsdsn/world-happiness)
 License: [CC0: Public Domain](https://creativecommons.org/publicdomain/zero/1.0/)
 
-### Chinook dataset
-
-Chinook digital media store database (11 tables, 2280 KB)
-
-```bash
-psql -d "postgres://[user]:[password]@[hostname]/chinook?sslmode=require" -f chinook.sql
-```
-
-- Source: [https://github.com/lerocha/chinook-database](https://github.com/lerocha/chinook-database)
-- License: [https://github.com/lerocha/chinook-database/blob/master/LICENSE.md](https://github.com/lerocha/chinook-database/blob/master/LICENSE.md)
 
   
-### Pagila dataset
 
-Pagila database (22 tables, 7856 KB)
-
-```bash
-psql -d "postgres://[user]:[password]@[hostname]/pagila?sslmode=require" -f pagila.sql
-```
-
-- Source: [https://github.com/devrimgunduz/pagila](https://github.com/devrimgunduz/pagila)
-- License: [LICENSE.txt](https://github.com/devrimgunduz/pagila/blob/master/LICENSE.txt)
 
 
 ## Licensing
