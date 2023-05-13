@@ -17,10 +17,10 @@ Data can be loaded using [psql](https://www.postgresql.org/docs/current/app-psql
 - [Chinook database](#chinook-database)
 - [Lego database](#lego-database)
 - [Netflix data](#netflix-data)
-- [Pagila database](pagila-database)
-- [Periodic table data](periodic-table-data)
-- [Titanic passenger data](titantic-passenger-data)
-- [World Happiness Index](world-happiness-index)
+- [Pagila database](#pagila-database)
+- [Periodic table data](#periodic-table-data)
+- [Titanic passenger data](#titantic-passenger-data)
+- [World Happiness Index](#world-happiness-index)
 
 ### Chinook database
 
