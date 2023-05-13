@@ -16,31 +16,31 @@ Data can be loaded using [psql](https://www.postgresql.org/docs/current/app-psql
 
 ### Periodic table data
 
-psql -d "postgres://daniel:<password>@ep-mute-rain-952417.us-east-2.aws.neon.tech/periodic_table?sslmode=require" -f periodic_table.sql
+psql -d "postgres://[user]:[password]@[hostname]/periodic_table?sslmode=require" -f periodic_table.sql
 
 ### Titanic data
 
-psql -d "postgres://daniel:<password>@ep-mute-rain-952417.us-east-2.aws.neon.tech/titanic?sslmode=require" -f titanic.sql
+psql -d "postgres://[user]:[password]@[hostname]/titanic?sslmode=require" -f titanic.sql
 
 ### Netfllix data
   
-psql -d "postgres://daniel:<password>@ep-mute-rain-952417.us-east-2.aws.neon.tech/netflix?sslmode=require" -f netflix_shows.sql
+psql -d "postgres://[user]:[password]@[hostname]/netflix?sslmode=require" -f netflix_shows.sql
   
 ### Lego data
 
-psql -d "postgres://daniel:<password>@ep-mute-rain-952417.us-east-2.aws.neon.tech/lego?sslmode=require" -f lego.sql
+psql -d "postgres://[user]:[password]@[hostname]/lego?sslmode=require" -f lego.sql
   
 ### Happines index
 
-psql -d "postgres://daniel:<password>@ep-mute-rain-952417.us-east-2.aws.neon.tech/happiness_index?sslmode=require" -f happiness_index.sql
+psql -d "postgres://[user]:[password]@[hostname]/happiness_index?sslmode=require" -f happiness_index.sql
   
 ### Chinook dataset
 
-psql -d "postgres://daniel:<password>@ep-mute-rain-952417.us-east-2.aws.neon.tech/chinook?sslmode=require" -f chinook.sql
+psql -d "postgres://[user]:[password]@[hostname]/chinook?sslmode=require" -f chinook.sql
   
 ### Pagila dataset
 
-psql -d "postgres://daniel:<password>@ep-mute-rain-952417.us-east-2.aws.neon.tech/chinook?sslmode=require" -f pagila.sql
+psql -d "postgres://[user]:[password]@[hostname]/pagila?sslmode=require" -f pagila.sql
 
 ## Licensing
 
