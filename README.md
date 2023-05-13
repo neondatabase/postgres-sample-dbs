@@ -12,6 +12,23 @@ pg_dump "postgres://[user]:[password]@[hostname]/[dbname]" --file=[file_name].sq
 
 ## Loading datasets into Postgres
 
+Start by cloning the repository to your local machine or downloading one of the `.sql` files.
+
+### Cloninig the repository to your local machine
+
+To clone the repository:
+
+```bash
+git clone https://github.com/danieltprice/postgres-sample-dbs.git
+```
+### Downloading an individual SQL file
+
+1. Click on the `.sql` file to open it.
+2. Above the content of the file, you should see a button labeled "Raw". Click it. This will open a new tab or window in your browser displaying the raw contents of the file.
+3. Right-click anywhere in the window or tab displaying the raw file contents, and select "Save As..." from the context menu. Choose a location on your computer to save the file, and click "Save".
+
+### Load data using psql
+
 Data can be loaded using [psql](https://www.postgresql.org/docs/current/app-psql.html).
 
 - [Chinook database](#chinook-database)
