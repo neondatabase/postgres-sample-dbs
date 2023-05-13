@@ -51,7 +51,7 @@ Netflix shows (1 table, 3832 KB)
 psql -d "postgres://[user]:[password]@[hostname]/netflix?sslmode=require" -f netflix_shows.sql
 ```
 
-- Source: []()
+- Source: [https://www.kaggle.com/datasets/shivamb/netflix-shows](https://www.kaggle.com/datasets/shivamb/netflix-shows)
 - License: [CC0: Public Domain](https://creativecommons.org/publicdomain/zero/1.0/) 
 
 ### Pagila database
@@ -85,8 +85,8 @@ Titanic passenger data (1 table, 408 KB)
 psql -d "postgres://[user]:[password]@[hostname]/titanic?sslmode=require" -f titanic.sql
 ```
 
-- Source: []()
-- License: [CC0: Public Domain](https://creativecommons.org/publicdomain/zero/1.0/)
+- Source: [https://www.kaggle.com/datasets/ibrahimelsayed182/titanic-dataset](https://www.kaggle.com/datasets/ibrahimelsayed182/titanic-dataset)
+- License: [Unknown](https://www.kaggle.com/datasets/vinicius150987/titanic3))
  
 ### World Happiness Index
 
