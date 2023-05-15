@@ -4,7 +4,7 @@ A collection of sample Postgres databases for learning, testing, and development
 
 # How the dataset files were created
 
-Data was loaded into [Neon Postgres](https://neon.tech/) (Postgres 15) using the prescribed installation method, or a schema was created and the data was loaded from a delimited file (`.csv`). The data was then dumped to an `*.sql` file using the [pg_dump](https://www.postgresql.org/docs/current/app-pgdump.html) utility. For example:
+Data was loaded into [Neon Postgres](https://neon.tech/) (Postgres 15) using the prescribed installation method, or a schema was created and the data was loaded from a delimited file (`.csv`). The data was then dumped using the [pg_dump](https://www.postgresql.org/docs/current/app-pgdump.html) utility. For example:
 
 ```bash
 pg_dump "postgres://[user]:[password]@[hostname]/[dbname]" --file=[file_name].sql --format=p --no-owner --no-privileges --no-tablespaces
@@ -38,9 +38,9 @@ CREATE DATABASE [dbname];
 
 Alternatively, if you are using [Neon Postgres](https://neon.tech/), you can create a database from the [Neon console](https://console.neon.tech/). See [Create a database](https://neon.tech/docs/manage/databases#create-a-database) for instructions.
 
-### Load data using psql
+### Load data
 
-The following sections describe how to load data using the [psql](https://www.postgresql.org/docs/current/app-psql.html) client.
+The following sections describe how to load data using eeother the [psql](https://www.postgresql.org/docs/current/app-psql.html) client or [pg_restore](https://www.postgresql.org/docs/current/app-pgrestore.html).
 
 - [Chinook database](#chinook-database)
 - [Employees database](#employees-database)
@@ -55,7 +55,7 @@ The following sections describe how to load data using the [psql](https://www.po
 
 Chinook digital media store database (11 tables, 2280 KB)
 
-Navigate to the directory where you cloned the repositpry or downloaded the `.sql` file, and run the following `psql` command:
+Navigate to the directory where you cloned the repositpry or downloaded the dump file, and run the following command:
 
 ```bash
 psql -d "postgres://[user]:[password]@[hostname]/chinook?sslmode=require" -f chinook.sql
@@ -89,7 +89,7 @@ pg_restore -d postgres://[user]:[password]@[hostname]/employees -Fc -j 2 employe
 
 Lego database (8 tables, 35 MB)
 
-Navigate to the directory where you cloned the repositpry or downloaded the `.sql` file, and run the following `psql` command:
+Navigate to the directory where you cloned the repositpry or downloaded the dump file, and run the following command:
 
 ```bash
 psql -d "postgres://[user]:[password]@[hostname]/lego?sslmode=require" -f lego.sql
@@ -101,7 +101,7 @@ psql -d "postgres://[user]:[password]@[hostname]/lego?sslmode=require" -f lego.s
 
 Netflix shows (1 table, 3832 KB)
 
-Navigate to the directory where you cloned the repositpry or downloaded the `.sql` file, and run the following `psql` command:
+Navigate to the directory where you cloned the repositpry or downloaded the dump file, and run the following command:
 
 ```bash
 psql -d "postgres://[user]:[password]@[hostname]/netflix?sslmode=require" -f netflix_shows.sql
@@ -114,7 +114,7 @@ psql -d "postgres://[user]:[password]@[hostname]/netflix?sslmode=require" -f net
 
 Pagila database (22 tables, 7856 KB)
 
-Navigate to the directory where you cloned the repositpry or downloaded the `.sql` file, and run the following `psql` command:
+Navigate to the directory where you cloned the repositpry or downloaded the dump file, and run the following command:
 
 ```bash
 psql -d "postgres://[user]:[password]@[hostname]/pagila?sslmode=require" -f pagila.sql
@@ -128,7 +128,7 @@ psql -d "postgres://[user]:[password]@[hostname]/pagila?sslmode=require" -f pagi
 
 Periodic table of elements (1 table, 72 KB)
 
-Navigate to the directory where you cloned the repositpry or downloaded the `.sql` file, and run the following `psql` command:
+Navigate to the directory where you cloned the repositpry or downloaded the dump file, and run the following command:
 
 ```bash
 psql -d "postgres://[user]:[password]@[hostname]/periodic_table?sslmode=require" -f periodic_table.sql
@@ -141,7 +141,7 @@ psql -d "postgres://[user]:[password]@[hostname]/periodic_table?sslmode=require"
 
 Titanic passenger data (1 table, 408 KB)
 
-Navigate to the directory where you cloned the repositpry or downloaded the `.sql` file, and run the following `psql` command:
+Navigate to the directory where you cloned the repositpry or downloaded the dump file, and run the following command:
 
 ```bash
 psql -d "postgres://[user]:[password]@[hostname]/titanic?sslmode=require" -f titanic.sql
@@ -154,7 +154,7 @@ psql -d "postgres://[user]:[password]@[hostname]/titanic?sslmode=require" -f tit
 
 World Happiness Index (1 table, 56 KB)
 
-Navigate to the directory where you cloned the repositpry or downloaded the `.sql` file, and run the following `psql` command:
+Navigate to the directory where you cloned the repositpry or downloaded the dump file, and run the following command:
 
 ```bash
 psql -d "postgres://[user]:[password]@[hostname]/happiness_index?sslmode=require" -f happiness_index.sql
