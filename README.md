@@ -14,7 +14,7 @@ For larger datasets, such the [employees](#employees-database) database, the fol
 
 ## Load a dataset into Postgres
 
-Start by cloning the repository to your local machine or download an individual `.sql` file.
+Start by cloning the repository to your local machine or download an individual dump file.
 
 ### Clone the repository to your local machine
 
@@ -22,15 +22,15 @@ Start by cloning the repository to your local machine or download an individual 
 git clone https://github.com/danieltprice/postgres-sample-dbs.git
 ```
 
-### Download an individual SQL file
+### Download an individual dump file
 
-1. Click on the `.sql` file to open it.
+1. Click on the dump file to open it.
 2. Above the content of the file, you should see a button labeled "Raw". Click it. This will open a new tab or window in your browser displaying the raw contents of the file.
 3. Right-click anywhere in the window or tab displaying the raw file contents, and select "Save As..." or "Save Page As ..." from the context menu. Choose a location on your computer to save the file, and click "Save".
 
 ### Create a database in Postgres
 
-You can load a dataset into any database, but the `psql` commands below assume you have a database named for the dataset. To create a database, use a `CREATE TABLE` statement:
+You can load a dataset into any database, but the commands below assume you have a database named for the dataset. To create a database, use a `CREATE TABLE` statement:
 
 ```sql
 CREATE DATABASE [dbname];
@@ -68,7 +68,15 @@ psql -d "postgres://[user]:[password]@[hostname]/chinook?sslmode=require" -f chi
 
 Employees database (6 tables, 360 MB)
 
-Navigate to the directory where you cloned the repositpry or downloaded the `.sql` file, and run the following `psql` command:
+Create the database and schema:
+
+```sql
+CREATE DATABASE employees;
+\c employees
+CREATE SCHEMA employees;
+```
+
+Navigate to the directory where you cloned the repositpry or downloaded the dump file, and run the following command:
 
 ```bash
 pg_restore -d postgres://[user]:[password]@[hostname]/employees -Fc -j 2 employees.sql.gz -c -v
