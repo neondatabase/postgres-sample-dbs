@@ -61,6 +61,19 @@ psql -d "postgres://[user]:[password]@[hostname]/chinook?sslmode=require" -f chi
 - Source: [https://github.com/lerocha/chinook-database](https://github.com/lerocha/chinook-database)
 - License: [https://github.com/lerocha/chinook-database/blob/master/LICENSE.md](https://github.com/lerocha/chinook-database/blob/master/LICENSE.md)
 
+### employees database
+
+Employees database (6 tables, 360 MB)
+
+Navigate to the directory where you cloned the repositpry or downloaded the `.sql` file, and run the following `psql` command:
+
+```bash
+pg_restore -d postgres://[user]:[password]@[hostname]/employees -Fc -j 2 employees.sql.gz -c -v
+```
+
+- Source: The initial dataset was created by Fusheng Wang and Carlo Zaniolo from Siemens Corporate Research, and can be found in XML format at this location: [http://timecenter.cs.aau.dk/software.htm](http://timecenter.cs.aau.dk/software.htm). Designing the relational schema was undertaken by Giuseppe Maxia while Patrick Crews was responsible for transforming the data into a format compatible with MySQL. Their work can be accessed here: [https://github.com/datacharmer/test_db](https://github.com/datacharmer/test_db). Subsequently, this information was adapted to a format suitable for PostgreSQL: [ttps://github.com/h8/employees-database](https://github.com/h8/employees-database). The data was generated, and there are inconsistencies.
+- License: This work is licensed under the Creative Commons Attribution-Share Alike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
+
 ### Lego database
 
 Lego database (8 tables, 35 MB)
