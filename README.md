@@ -40,7 +40,7 @@ Alternatively, if you are using [Neon Postgres](https://neon.tech/), you can cre
 
 ### Load data
 
-The following sections describe how to load data using eeother the [psql](https://www.postgresql.org/docs/current/app-psql.html) client or [pg_restore](https://www.postgresql.org/docs/current/app-pgrestore.html).
+The following sections describe how to load data using either the [psql](https://www.postgresql.org/docs/current/app-psql.html) client or [pg_restore](https://www.postgresql.org/docs/current/app-pgrestore.html).
 
 - [Chinook database](#chinook-database)
 - [Employees database](#employees-database)
