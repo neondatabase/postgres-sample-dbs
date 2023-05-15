@@ -10,6 +10,8 @@ Data was loaded into [Neon Postgres](https://neon.tech/) (Postgres 15) using the
 pg_dump "postgres://[user]:[password]@[hostname]/[dbname]" --file=[file_name].sql --format=p --no-owner --no-privileges --no-tablespaces
 ```
 
+For larger datasets, such the [employees](#employees-database) database, the following options were used: `--format=c -Z 6`
+
 ## Load a dataset into Postgres
 
 Start by cloning the repository to your local machine or download an individual `.sql` file.
