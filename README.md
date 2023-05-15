@@ -41,6 +41,7 @@ Alternatively, if you are using [Neon Postgres](https://neon.tech/), you can cre
 The following sections describe how to load data using the [psql](https://www.postgresql.org/docs/current/app-psql.html) client.
 
 - [Chinook database](#chinook-database)
+- [Employees database](#employees-database)
 - [Lego database](#lego-database)
 - [Netflix data](#netflix-data)
 - [Pagila database](#pagila-database)
