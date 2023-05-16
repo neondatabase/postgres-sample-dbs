@@ -58,7 +58,7 @@ Chinook digital media store database (11 tables, 2280 KB)
 Navigate to the directory where you cloned the repositpry or downloaded the dump file, and run the following command:
 
 ```bash
-psql -d "postgres://[user]:[password]@[hostname]/chinook?sslmode=require" -f chinook.sql
+psql -d "postgres://[user]:[password]@[hostname]/chinook" -f chinook.sql
 ```
 
 - Source: [https://github.com/lerocha/chinook-database](https://github.com/lerocha/chinook-database)
@@ -92,7 +92,7 @@ Lego database (8 tables, 35 MB)
 Navigate to the directory where you cloned the repositpry or downloaded the dump file, and run the following command:
 
 ```bash
-psql -d "postgres://[user]:[password]@[hostname]/lego?sslmode=require" -f lego.sql
+psql -d "postgres://[user]:[password]@[hostname]/lego" -f lego.sql
 ```
 - Source: [https://www.kaggle.com/datasets/rtatman/lego-database](https://www.kaggle.com/datasets/rtatman/lego-database)
 - License: [CC0: Public Domain](https://creativecommons.org/publicdomain/zero/1.0/) 
@@ -104,7 +104,7 @@ Netflix shows (1 table, 3832 KB)
 Navigate to the directory where you cloned the repositpry or downloaded the dump file, and run the following command:
 
 ```bash
-psql -d "postgres://[user]:[password]@[hostname]/netflix?sslmode=require" -f netflix_shows.sql
+psql -d "postgres://[user]:[password]@[hostname]/netflix" -f netflix_shows.sql
 ```
 
 - Source: [https://www.kaggle.com/datasets/shivamb/netflix-shows](https://www.kaggle.com/datasets/shivamb/netflix-shows)
@@ -117,7 +117,7 @@ Pagila database (22 tables, 7856 KB)
 Navigate to the directory where you cloned the repositpry or downloaded the dump file, and run the following command:
 
 ```bash
-psql -d "postgres://[user]:[password]@[hostname]/pagila?sslmode=require" -f pagila.sql
+psql -d "postgres://[user]:[password]@[hostname]/pagila" -f pagila.sql
 ```
 
 - Source: [https://github.com/devrimgunduz/pagila](https://github.com/devrimgunduz/pagila)
@@ -131,7 +131,7 @@ Periodic table of elements (1 table, 72 KB)
 Navigate to the directory where you cloned the repositpry or downloaded the dump file, and run the following command:
 
 ```bash
-psql -d "postgres://[user]:[password]@[hostname]/periodic_table?sslmode=require" -f periodic_table.sql
+psql -d "postgres://[user]:[password]@[hostname]/periodic_table" -f periodic_table.sql
 ```
 
 - Source: [https://github.com/andrejewski/periodic-table](https://github.com/andrejewski/periodic-table)
@@ -144,7 +144,7 @@ Titanic passenger data (1 table, 408 KB)
 Navigate to the directory where you cloned the repositpry or downloaded the dump file, and run the following command:
 
 ```bash
-psql -d "postgres://[user]:[password]@[hostname]/titanic?sslmode=require" -f titanic.sql
+psql -d "postgres://[user]:[password]@[hostname]/titanic" -f titanic.sql
 ```
 
 - Source: [https://www.kaggle.com/datasets/ibrahimelsayed182/titanic-dataset](https://www.kaggle.com/datasets/ibrahimelsayed182/titanic-dataset)
@@ -157,7 +157,7 @@ World Happiness Index (1 table, 56 KB)
 Navigate to the directory where you cloned the repositpry or downloaded the dump file, and run the following command:
 
 ```bash
-psql -d "postgres://[user]:[password]@[hostname]/happiness_index?sslmode=require" -f happiness_index.sql
+psql -d "postgres://[user]:[password]@[hostname]/happiness_index" -f happiness_index.sql
 ```
 
 - Source: [https://www.kaggle.com/datasets/unsdsn/world-happiness](https://www.kaggle.com/datasets/unsdsn/world-happiness)
