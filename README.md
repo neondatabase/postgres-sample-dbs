@@ -4,17 +4,17 @@ A collection of sample Postgres databases for learning, testing, and development
 
 # How the dataset files were created
 
-Data was loaded into [Neon Serverless Postgres](https://neon.tech/) (Postgres 15) using the recommended installation method. Alternatively, a database schema was created, and data was loaded from a delimited file. Subsequently, the data was dumped using the [pg_dump](https://www.postgresql.org/docs/current/app-pgdump.html) utility. For example:
+Data was loaded into [Neon Serverless Postgres](https://neon.tech/) (Postgres 15). The data was then dumped using the [pg_dump](https://www.postgresql.org/docs/current/app-pgdump.html) utility. For example:
 
 ```bash
-pg_dump "postgres://[user]:[password]@[hostname]/[dbname]" --file=[file_name].sql --format=p --no-owner --no-privileges --no-tablespaces
+pg_dump "postgres://[user]:[password]@[hostname]/[dbname]" --file=[file_name].sql --format=p --no-owner --no-privileges
 ```
 
-For larger datasets, such the [employees](#employees-database) database, the following options were used: `--format=c -Z 6`
+For larger datasets, such as the [employees](#employees-database) database, the following format option was used: `--format=c`
 
 ## Load a dataset into Postgres
 
-Start by cloning the repository to your local machine or download an individual dump file.
+Start by cloning the repository to your local machine or downloading an individual dump file.
 
 ### Clone the repository to your local machine
 
@@ -36,11 +36,11 @@ You can load a dataset into any database, but the commands below assume you have
 CREATE DATABASE [dbname];
 ```
 
-Alternatively, if you are using [Neon Postgres](https://neon.tech/), you can create a database from the [Neon console](https://console.neon.tech/). See [Create a database](https://neon.tech/docs/manage/databases#create-a-database) for instructions.
+If you are using [Neon Postgres](https://neon.tech/), you can create a database from the [Neon console](https://console.neon.tech/). See [Create a database](https://neon.tech/docs/manage/databases#create-a-database) for instructions.
 
 ### Load data
 
-The following sections describe how to load data using either the [psql](https://www.postgresql.org/docs/current/app-psql.html) client or [pg_restore](https://www.postgresql.org/docs/current/app-pgrestore.html).
+The following sections describe how to load data using either [psql](https://www.postgresql.org/docs/current/app-psql.html) or [pg_restore](https://www.postgresql.org/docs/current/app-pgrestore.html).
 
 - [Chinook database](#chinook-database)
 - [Employees database](#employees-database)
@@ -55,7 +55,7 @@ The following sections describe how to load data using either the [psql](https:/
 
 Chinook digital media store database (11 tables, 2280 KB)
 
-Navigate to the directory where you cloned the repositpry or downloaded the dump file, and run the following command:
+Navigate to the directory where you cloned the repository or downloaded the dump file, and run the following command:
 
 ```bash
 psql -d "postgres://[user]:[password]@[hostname]/chinook" -f chinook.sql
@@ -76,10 +76,10 @@ CREATE DATABASE employees;
 CREATE SCHEMA employees;
 ```
 
-Navigate to the directory where you cloned the repositpry or downloaded the dump file, and run the following command:
+Navigate to the directory where you cloned the repository or downloaded the dump file, and run the following command:
 
 ```bash
-pg_restore -d postgres://[user]:[password]@[hostname]/employees -Fc -j 2 employees.sql.gz -c -v
+pg_restore -d postgres://[user]:[password]@[hostname]/employees -Fc employees.sql.gz -c -v -no-owner --no-privileges
 ```
 
 - Source: The initial dataset was created by Fusheng Wang and Carlo Zaniolo from Siemens Corporate Research, and can be found in XML format at this location: [http://timecenter.cs.aau.dk/software.htm](http://timecenter.cs.aau.dk/software.htm). Designing the relational schema was undertaken by Giuseppe Maxia while Patrick Crews was responsible for transforming the data into a format compatible with MySQL. Their work can be accessed here: [https://github.com/datacharmer/test_db](https://github.com/datacharmer/test_db). Subsequently, this information was adapted to a format suitable for PostgreSQL: [ttps://github.com/h8/employees-database](https://github.com/h8/employees-database). The data was generated, and there are inconsistencies.
@@ -89,7 +89,7 @@ pg_restore -d postgres://[user]:[password]@[hostname]/employees -Fc -j 2 employe
 
 Lego database (8 tables, 35 MB)
 
-Navigate to the directory where you cloned the repositpry or downloaded the dump file, and run the following command:
+Navigate to the directory where you cloned the repository or downloaded the dump file, and run the following command:
 
 ```bash
 psql -d "postgres://[user]:[password]@[hostname]/lego" -f lego.sql
@@ -101,7 +101,7 @@ psql -d "postgres://[user]:[password]@[hostname]/lego" -f lego.sql
 
 Netflix shows (1 table, 3832 KB)
 
-Navigate to the directory where you cloned the repositpry or downloaded the dump file, and run the following command:
+Navigate to the directory where you cloned the repository or downloaded the dump file, and run the following command:
 
 ```bash
 psql -d "postgres://[user]:[password]@[hostname]/netflix" -f netflix_shows.sql
@@ -114,7 +114,7 @@ psql -d "postgres://[user]:[password]@[hostname]/netflix" -f netflix_shows.sql
 
 Pagila database (22 tables, 7856 KB)
 
-Navigate to the directory where you cloned the repositpry or downloaded the dump file, and run the following command:
+Navigate to the directory where you cloned the repository or downloaded the dump file, and run the following command:
 
 ```bash
 psql -d "postgres://[user]:[password]@[hostname]/pagila" -f pagila.sql
@@ -128,7 +128,7 @@ psql -d "postgres://[user]:[password]@[hostname]/pagila" -f pagila.sql
 
 Periodic table of elements (1 table, 72 KB)
 
-Navigate to the directory where you cloned the repositpry or downloaded the dump file, and run the following command:
+Navigate to the directory where you cloned the repository or downloaded the dump file, and run the following command:
 
 ```bash
 psql -d "postgres://[user]:[password]@[hostname]/periodic_table" -f periodic_table.sql
@@ -141,7 +141,7 @@ psql -d "postgres://[user]:[password]@[hostname]/periodic_table" -f periodic_tab
 
 Titanic passenger data (1 table, 408 KB)
 
-Navigate to the directory where you cloned the repositpry or downloaded the dump file, and run the following command:
+Navigate to the directory where you cloned the repository or downloaded the dump file, and run the following command:
 
 ```bash
 psql -d "postgres://[user]:[password]@[hostname]/titanic" -f titanic.sql
@@ -154,7 +154,7 @@ psql -d "postgres://[user]:[password]@[hostname]/titanic" -f titanic.sql
 
 World Happiness Index (1 table, 56 KB)
 
-Navigate to the directory where you cloned the repositpry or downloaded the dump file, and run the following command:
+Navigate to the directory where you cloned the repository or downloaded the dump file, and run the following command:
 
 ```bash
 psql -d "postgres://[user]:[password]@[hostname]/happiness_index" -f happiness_index.sql
