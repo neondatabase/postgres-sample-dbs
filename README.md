@@ -62,7 +62,7 @@ The following sections describe how to load data using either [psql](https://www
 
 ### Chinook database
 
-Chinook digital media store database (11 tables, 2280 KB)
+Chinook digital media store database (11 tables, 2.3 MB)
 
 Navigate to the directory where you cloned the repository or downloaded the dump file, and run the following command:
 
@@ -75,7 +75,7 @@ psql -d "postgres://[user]:[password]@[hostname]/chinook" -f chinook.sql
 
 ### employees database
 
-Employees database (6 tables, 360 MB)
+Employees database (6 tables, 333 MB)
 
 Create the database and schema:
 
@@ -88,7 +88,7 @@ CREATE SCHEMA employees;
 Navigate to the directory where you cloned the repository or downloaded the dump file, and run the following command:
 
 ```bash
-pg_restore -d postgres://[user]:[password]@[hostname]/employees -Fc employees.sql.gz -c -v -no-owner --no-privileges
+pg_restore -d postgres://[user]:[password]@[hostname]/employees -Fc employees.sql.gz -c -v --no-owner --no-privileges
 ```
 
 - Source: The initial dataset was created by Fusheng Wang and Carlo Zaniolo from Siemens Corporate Research, and can be found in XML format at this location: [http://timecenter.cs.aau.dk/software.htm](http://timecenter.cs.aau.dk/software.htm). Designing the relational schema was undertaken by Giuseppe Maxia while Patrick Crews was responsible for transforming the data into a format compatible with MySQL. Their work can be accessed here: [https://github.com/datacharmer/test_db](https://github.com/datacharmer/test_db). Subsequently, this information was adapted to a format suitable for PostgreSQL: [https://github.com/h8/employees-database](https://github.com/h8/employees-database). The data was generated, and there are inconsistencies.
@@ -96,7 +96,7 @@ pg_restore -d postgres://[user]:[password]@[hostname]/employees -Fc employees.sq
 
 ### Lego database
 
-Lego database (8 tables, 35 MB)
+Lego database (8 tables, 42 MB)
 
 Navigate to the directory where you cloned the repository or downloaded the dump file, and run the following command:
 
@@ -108,12 +108,12 @@ psql -d "postgres://[user]:[password]@[hostname]/lego" -f lego.sql
 
 ### Netflix data
 
-Netflix shows (1 table, 3832 KB)
+Netflix shows (1 table, 11 MB)
 
 Navigate to the directory where you cloned the repository or downloaded the dump file, and run the following command:
 
 ```bash
-psql -d "postgres://[user]:[password]@[hostname]/netflix" -f netflix_shows.sql
+psql -d "postgres://[user]:[password]@[hostname]/netflix" -f netflix.sql
 ```
 
 - Source: [https://www.kaggle.com/datasets/shivamb/netflix-shows](https://www.kaggle.com/datasets/shivamb/netflix-shows)
@@ -121,7 +121,7 @@ psql -d "postgres://[user]:[password]@[hostname]/netflix" -f netflix_shows.sql
 
 ### Pagila database
 
-Pagila database (22 tables, 7856 KB)
+Pagila database (33 tables, 7.1 MB)
 
 Navigate to the directory where you cloned the repository or downloaded the dump file, and run the following command:
 
