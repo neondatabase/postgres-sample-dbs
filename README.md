@@ -108,6 +108,8 @@ A table containing data about the periodic table of elements.
 - Source: [https://github.com/andrejewski/periodic-table](https://github.com/andrejewski/periodic-table)
 - License: [ISC License](https://github.com/andrejewski/periodic-table/blob/master/LICENSE)
 
+`Copyright (c) 2017, Chris Andrejewski <christopher.andrejewski@gmail.com>`
+
 ### World Happiness Index
 
 A dataset with multiple indicators for evaluating the happiness of countries of the world.
@@ -311,6 +313,7 @@ Sample data for a fictional DVD rental store. Pagila includes tables for films, 
 
 - Source: [https://github.com/devrimgunduz/pagila](https://github.com/devrimgunduz/pagila)
 - License: [LICENSE.txt](https://github.com/devrimgunduz/pagila/blob/master/LICENSE.txt)
+- `Copyright (c) Devrim Gündüz <devrim@gunduz.org>`
 
 ### Chinook database
 
@@ -366,7 +369,8 @@ A sample database for a digital media store, including tables for artists, album
     ```
 
 - Source: [https://github.com/lerocha/chinook-database](https://github.com/lerocha/chinook-database)
-- License: [https://github.com/lerocha/chinook-database/blob/master/LICENSE.md](https://github.com/lerocha/chinook-database/blob/master/LICENSE.md)
+- License: [LICENSE](https://github.com/lerocha/chinook-database/blob/master/LICENSE.md)
+- `Copyright (c) 2008-2017 Luis Rocha`
 
 ### Lego database
 
@@ -474,6 +478,6 @@ A dataset containing details about employees, their departments, salaries, and m
 
 This repository is provided under the MIT License. However, please note that each individual database included in this repository is subject to its own license terms.
 
-The MIT License applies to the scripts and other components that we created, which include the scripts that load the data. We respect the rights of the original creators of the databases, and we only redistribute these databases in compliance with their respective licenses.
+The MIT License applies to the scripts and other components that we created. We respect the rights of the original creators of the databases, and we only redistribute these databases in compliance with their respective licenses.
 
 For each individual database, we have clearly indicated where the full text of the license can be found. If you choose to use any of these databases, you must comply with the terms specified in their respective licenses.
