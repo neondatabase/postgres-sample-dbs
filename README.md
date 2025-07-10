@@ -4,7 +4,7 @@ A collection of sample Postgres databases for learning, testing, and development
 
 # How the dataset files were created
 
-Data was loaded into [Neon Serverless Postgres](https://neon.tech/) (Postgres 15). The data was then dumped using the [pg_dump](https://www.postgresql.org/docs/current/app-pgdump.html) utility. For example:
+Data was loaded into [Neon Serverless Postgres](https://neon.com/) (Postgres 15). The data was then dumped using the [pg_dump](https://www.postgresql.org/docs/current/app-pgdump.html) utility. For example:
 
 ```bash
 pg_dump "postgres://<user>:<password>@<hostname>/<dbname>" --file=[file_name].sql --format=p --no-owner --no-privileges
@@ -15,7 +15,7 @@ For larger datasets, such as the [employees](#employees-database) database, the 
 ### Clone the repository to your local machine
 
 ```bash
-git clone https://github.com/danieltprice/postgres-sample-dbs.git
+git clone https://github.com/neondatabase-labs/postgres-sample-dbs.git
 ```
 
 ### Download an individual dump file
@@ -30,20 +30,20 @@ From this repo on the GitHub site:
 
 Using wget:
 
-get https://raw.githubusercontent.com/danieltprice/postgres-sample-dbs/main/<dump_file_name.sql>
+wget https://raw.githubusercontent.com/neondatabase-labs/postgres-sample-dbs/main/<dump_file_name.sql>
 
 
 ## Prerequisites
 
 - A `psql` client for connecting to your Neon database and loading data. This client is included with a standalone PostgreSQL installation. See [PostgreSQL Downloads](https://www.postgresql.org/download/).
 - A `pg_restore` client if you are loading the [employees](#employees-database) or [postgres_air](#postgres-air-database) database. The `pg_restore` client is also included with a standalone PostgreSQL installation. See [PostgreSQL Downloads](https://www.postgresql.org/download/).
-- A Neon database connection string to load data and connect to your database. After creating a database, you can obtain the connection string from the **Connection Details** widget on the Neon **Dashboard**. In the instructions that follow, replace `postgres://<user>:<password>@<hostname>/[dbname]` with your Neon database connection string. For further information, see [Connect from any application](https://neon.tech/docs/connect/connect-from-any-app).
-- Instructions for each dataset require that you create a database. You can do so from a client such as `psql` or from the [Neon SQL Editor](https://neon.tech/docs/get-started-with-neon/query-with-neon-sql-editor).
-- A Neon [Pro](/https://neon.tech/docs/introduction/pro-plan) account is required to install datasets larger than 3 GBs.
+- A Neon database connection string to load data and connect to your database. After creating a database, you can obtain the connection string from the **Connection Details** widget on the Neon **Dashboard**. In the instructions that follow, replace `postgres://<user>:<password>@<hostname>/[dbname]` with your Neon database connection string. For further information, see [Connect from any application](https://neon.com/docs/connect/connect-from-any-app).
+- Instructions for each dataset require that you create a database. You can do so from a client such as `psql` or from the [Neon SQL Editor](https://neon.com/docs/get-started-with-neon/query-with-neon-sql-editor).
+- A Neon [Paid](https://neon.com/docs/introduction/plans) account is required to install datasets larger than 500 MB.
 
 ## Sample data
 
-Sample datasets are listed in order of the smallest to largest installed size. Please be aware that the Neon Free Tier has a storage limit of 3 GBs per branch. Datasets larger than 3 GBs cannot be loaded on the Free Tier.
+Sample datasets are listed in order of the smallest to largest installed size. Please be aware that the Neon Free Tier has a storage limit of 500 MB per branch. Datasets larger than 500 MB cannot be loaded on the Free Tier.
 
 | Name                                                | Tables | Records | Source file size      | Installed size |
 |-----------------------------------------------------|--------|------   |-----------------------|----------------|
