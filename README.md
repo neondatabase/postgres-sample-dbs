@@ -51,6 +51,7 @@ Sample datasets are listed in order of the smallest to largest installed size. N
 | [World Happiness Index](#world-happiness-index)     | 1      | 156     | 9.4 KB                | 7.2 MB         |
 | [Titanic passenger data](#titanic-passenger-data)   | 1      | 1309    | 220 KB                | 7.5 MB         |
 | [Netflix data](#netflix-data)                       | 1      | 8807    | 3.2 MB                | 11 MB          |
+| [DVD rental tutorial database](#dvd-rental-tutorial-database) | 15 | 15861 | 2.7 MB                | 14 MB          |
 | [Pagila database](#pagila-database)                 | 33     | 62322   | 3 MB                  | 15 MB          |
 | [Chinook database](#chinook-database)               | 11     | 77929   | 1.8 MB                | 17 MB          |
 | [Lego database](#lego-database)                     | 8      | 633250  | 13 MB                 | 42 MB          |
@@ -233,9 +234,56 @@ A dataset containing information about movies and tv shows on Netflix.
 - Source: [https://www.kaggle.com/datasets/shivamb/netflix-shows](https://www.kaggle.com/datasets/shivamb/netflix-shows)
 - License: [CC0: Public Domain](https://creativecommons.org/publicdomain/zero/1.0/)
 
+### DVD rental tutorial database
+
+The official [PostgreSQL tutorial](https://neon.com/postgresql/tutorial) sample database (15 tables). A smaller, simpler DVD rental dataset ideal for learning PostgreSQL basics. For a more comprehensive DVD rental database, see [Pagila](#pagila-database).
+
+1. Create a `dvdrental` database:
+
+    ```sql
+    CREATE DATABASE dvdrental;
+    ```
+
+2. Download the source file:
+
+    ```bash
+    wget https://raw.githubusercontent.com/neondatabase/postgres-sample-dbs/main/dvdrental.sql
+    ```
+
+3. Navigate to the directory where you downloaded the source file, and run the following command:
+
+    ```bash
+    psql -d "postgres://<user>:<password>@<hostname>/dvdrental" -f dvdrental.sql
+    ```
+
+4. Connect to the `dvdrental` database:
+
+    ```bash
+    psql postgres://<user>:<password>@<hostname>/dvdrental
+    ```
+
+5. Find the top 5 customers by total payment amount:
+
+    ```sql
+    SELECT 
+        c.customer_id,
+        c.first_name,
+        c.last_name,
+        SUM(p.amount) AS total_spent
+    FROM 
+        customer c
+    JOIN 
+        payment p ON c.customer_id = p.customer_id
+    GROUP BY 
+        c.customer_id, c.first_name, c.last_name
+    ORDER BY 
+        total_spent DESC
+    LIMIT 5;
+    ```
+
 ### Pagila database
 
-Sample data for a fictional DVD rental store. Pagila includes tables for films, actors, film categories, stores, customers, payments, and more.
+A more extensive DVD rental database (33 tables). PostgreSQL port of the MySQL Sakila database with additional complexity. Includes tables for films, actors, film categories, stores, customers, payments, and more. For a simpler tutorial version, see [DVD rental tutorial database](#dvd-rental-tutorial-database).
 
 1. Create a `pagila` database:
 
