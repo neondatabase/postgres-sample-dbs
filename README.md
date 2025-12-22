@@ -30,20 +30,20 @@ From this repo on the GitHub site:
 
 Using wget:
 
+```bash
 wget https://raw.githubusercontent.com/neondatabase-labs/postgres-sample-dbs/main/<dump_file_name.sql>
-
+```
 
 ## Prerequisites
 
 - A `psql` client for connecting to your Neon database and loading data. This client is included with a standalone PostgreSQL installation. See [PostgreSQL Downloads](https://www.postgresql.org/download/).
-- A `pg_restore` client if you are loading the [employees](#employees-database) or [postgres_air](#postgres-air-database) database. The `pg_restore` client is also included with a standalone PostgreSQL installation. See [PostgreSQL Downloads](https://www.postgresql.org/download/).
+- A `pg_restore` client if you are loading the [employees](#employees-database) database. The `pg_restore` client is also included with a standalone PostgreSQL installation. See [PostgreSQL Downloads](https://www.postgresql.org/download/).
 - A Neon database connection string to load data and connect to your database. After creating a database, you can obtain the connection string from the **Connection Details** widget on the Neon **Dashboard**. In the instructions that follow, replace `postgres://<user>:<password>@<hostname>/[dbname]` with your Neon database connection string. For further information, see [Connect from any application](https://neon.com/docs/connect/connect-from-any-app).
 - Instructions for each dataset require that you create a database. You can do so from a client such as `psql` or from the [Neon SQL Editor](https://neon.com/docs/get-started-with-neon/query-with-neon-sql-editor).
-- A Neon [Paid](https://neon.com/docs/introduction/plans) account is required to install datasets larger than 500 MB.
 
 ## Sample data
 
-Sample datasets are listed in order of the smallest to largest installed size. Please be aware that the Neon Free Tier has a storage limit of 500 MB per branch. Datasets larger than 500 MB cannot be loaded on the Free Tier.
+Sample datasets are listed in order of the smallest to largest installed size. Note that Neon's Free Tier has a storage limit of 500 MB per branch, though all databases in this repository fit within that limit.
 
 | Name                                                | Tables | Records | Source file size      | Installed size |
 |-----------------------------------------------------|--------|------   |-----------------------|----------------|
@@ -55,12 +55,8 @@ Sample datasets are listed in order of the smallest to largest installed size. P
 | [Chinook database](#chinook-database)               | 11     | 77929   | 1.8 MB                | 17 MB          |
 | [Lego database](#lego-database)                     | 8      | 633250  | 13 MB                 | 42 MB          |
 | [Employees database](#employees-database)           | 6      | 3919015 | 34 MB                 | 333 MB         |
-| [Wikipedia vector embeddings](#wikipedia-vector-embeddings) | 1    | 25000    | 1.7 GB         | 850 MB         |
-| [Postgres air](#postgres-air-database)              | 10     | 67228600 | 1.2 GB               | 6.7 GB         |
 
-<Admonition type="note">
-Installed size is measured using the query: `SELECT pg_size_pretty(pg_database_size('your_database_name'))`. The reported size for small datasets may appear larger than expected due to inherent Postgres storage overhead.
-</Admonition>
+> **Note:** Installed size is measured using the query: `SELECT pg_size_pretty(pg_database_size('your_database_name'))`. The reported size for small datasets may appear larger than expected due to inherent Postgres storage overhead.
 
 ### Periodic table data
 
@@ -74,23 +70,15 @@ A table containing data about the periodic table of elements.
 
 2. Download the source file:
 
-    <CodeBlock shouldWrap>
-
     ```bash
     wget https://raw.githubusercontent.com/neondatabase/postgres-sample-dbs/main/periodic_table.sql
     ```
 
-    </CodeBlock>
-
 3. Navigate to the directory where you downloaded the source file, and run the following command:
-
-    <CodeBlock shouldWrap>
 
     ```bash
     psql -d "postgres://<user>:<password>@<hostname>/periodic_table" -f periodic_table.sql
     ```
-
-    </CodeBlock>
 
 4. Connect to the `periodic_table` database:
 
@@ -121,24 +109,20 @@ A dataset with multiple indicators for evaluating the happiness of countries of 
 
 2. Download the source file:
 
-    <CodeBlock shouldWrap>
-
     ```bash
     wget https://raw.githubusercontent.com/neondatabase/postgres-sample-dbs/main/happiness_index.sql
     ```
 
-    </CodeBlock>
-
 3. Navigate to the directory where you downloaded the source file, and run the following command:
 
     ```bash
-    psql -d "postgres://<user>:<password>@<hostname>/happiness_index" -f happiness_index.sql
+    psql -d "postgres://<user>:<password>@<hostname>/world_happiness" -f happiness_index.sql
     ```
 
-4. Connect to the `titanic` database:
+4. Connect to the `world_happiness` database:
 
     ```bash
-    psql postgres://<user>:<password>@<hostname>/world_happiness_index
+    psql postgres://<user>:<password>@<hostname>/world_happiness
     ```
 
 5. Find the countries where the happiness score is above average but the GDP per capita is below average:
@@ -152,7 +136,7 @@ A dataset with multiple indicators for evaluating the happiness of countries of 
         "2019"
     WHERE 
         score > (SELECT AVG(score) FROM "2019") 
-        AND 
+    AND
         gdp_per_capita < (SELECT AVG(gdp_per_capita) FROM "2019")
     ORDER BY 
         score DESC;
@@ -173,23 +157,15 @@ A dataset containing information on the passengers aboard the RMS Titanic, which
 
 2. Download the source file:
 
-    <CodeBlock shouldWrap>
-
     ```bash
     wget https://raw.githubusercontent.com/neondatabase/postgres-sample-dbs/main/titanic.sql
     ```
 
-    </CodeBlock>
-
 3. Navigate to the directory where you downloaded the source file, and run the following command:
-
-    <CodeBlock shouldWrap>
 
     ```bash
     psql -d "postgres://<user>:<password>@<hostname>/titanic" -f titanic.sql
     ```
-
-    </CodeBlock>
 
 4. Connect to the `titanic` database:
 
@@ -221,23 +197,15 @@ A dataset containing information about movies and tv shows on Netflix.
 
 2. Download the source file:
 
-    <CodeBlock shouldWrap>
-
     ```bash
     wget https://raw.githubusercontent.com/neondatabase/postgres-sample-dbs/main/netflix.sql
     ```
 
-    </CodeBlock>
-
 3. Navigate to the directory where you downloaded the source file, and run the following command:
 
-    <CodeBlock>
-
     ```bash
-    psql -d "postgres://<user>:<password>@<hostname>/netflix" -f netflix_shows.sql
+    psql -d "postgres://<user>:<password>@<hostname>/netflix" -f netflix.sql
     ```
-
-    </CodeBlock>
 
 4. Connect to the `netflix` database:
 
@@ -277,13 +245,9 @@ Sample data for a fictional DVD rental store. Pagila includes tables for films, 
 
 2. Download the source file:
 
-    <CodeBlock shouldWrap>
-
     ```bash
     wget https://raw.githubusercontent.com/neondatabase/postgres-sample-dbs/main/pagila.sql
     ```
-
-    </CodeBlock>
 
 3. Navigate to the directory where you downloaded the source file, and run the following command:
 
@@ -326,23 +290,15 @@ A sample database for a digital media store, including tables for artists, album
 
 2. Download the source file:
 
-    <CodeBlock shouldWrap>
-
     ```bash
     wget https://raw.githubusercontent.com/neondatabase/postgres-sample-dbs/main/chinook.sql
     ```
 
-    </CodeBlock>
-
 3. Navigate to the directory where you downloaded the source file, and run the following command:
-
-    <CodeBlock shouldWrap>
 
     ```bash
     psql -d "postgres://<user>:<password>@<hostname>/chinook" -f chinook.sql
     ```
-
-    </CodeBlock>
 
 4. Connect to the `chinook` database:
 
@@ -383,13 +339,9 @@ A dataset containing information about various LEGO sets, their themes, parts, c
 
 2. Download the source file:
 
-    <CodeBlock shouldWrap>
-
     ```bash
     wget https://raw.githubusercontent.com/neondatabase/postgres-sample-dbs/main/lego.sql
     ```
-
-    </CodeBlock>
 
 3. Navigate to the directory where you downloaded the source file, and run the following command:
 
@@ -421,33 +373,23 @@ A dataset containing information about various LEGO sets, their themes, parts, c
 
 A dataset containing details about employees, their departments, salaries, and more.
 
-1. Create the database and schema:
+1. Create the database:
 
     ```sql
     CREATE DATABASE employees;
-    \c employees
-    CREATE SCHEMA employees;
     ```
 
 2. Download the source file:
-
-    <CodeBlock shouldWrap>
 
     ```bash
     wget https://raw.githubusercontent.com/neondatabase/postgres-sample-dbs/main/employees.sql.gz
     ```
 
-    </CodeBlock>
-
 3. Navigate to the directory where you downloaded the source file, and run the following command:
 
-    <CodeBlock shouldWrap>
-
     ```bash
-    pg_restore -d postgres://<user>:<password>@<hostname>/employees -Fc employees.sql.gz -c -v --no-owner --no-privileges
+    pg_restore -d postgres://<user>:<password>@<hostname>/employees -Fc employees.sql.gz --no-owner --no-privileges
     ```
-
-    </CodeBlock>
 
     Database objects are created in the `employees` schema rather than the `public` schema.
 
