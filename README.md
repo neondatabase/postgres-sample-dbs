@@ -34,6 +34,30 @@ Using wget:
 wget https://raw.githubusercontent.com/neondatabase-labs/postgres-sample-dbs/main/<dump_file_name.sql>
 ```
 
+## Loading the data
+
+These dump files use `COPY ... FROM stdin` for fast data loading. This command streams data through the client connection, which **only works with psql**:
+```bash
+psql -d "postgres://user:pass@host/dbname" -f filename.sql
+```
+
+**This won't work:**
+- Pasting SQL into the Neon SQL Editor, pgAdmin, DBeaver, or other GUI tools
+- Pasting into an interactive psql session
+
+These tools don't support psql's stdin streaming protocol and will fail with errors like "No source stream defined" or syntax errors.
+
+<details>
+<summary>Need to use a GUI tool?</summary>
+
+Re-export the data with INSERT statements instead of COPY:
+```bash
+pg_dump --inserts dbname > dump_inserts.sql
+```
+
+This is slower but works anywhere.
+</details>
+
 ## Prerequisites
 
 - A `psql` client for connecting to your Neon database and loading data. This client is included with a standalone PostgreSQL installation. See [PostgreSQL Downloads](https://www.postgresql.org/download/).
